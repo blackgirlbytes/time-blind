@@ -11,8 +11,11 @@ A reality check for folks who think they can do it all in a short amount of time
 <img width="1491" alt="Screenshot 2023-08-06 at 12 36 56 PM" src="https://github.com/blackgirlbytes/time-blind/assets/22990146/aad72890-bdde-4d24-8b8d-252cefd72964">
 
 ## Running locally
-
-First, run the development server:
+### Install dependencies 
+```bash
+npm install
+```
+### Run the development server:
 
 ```bash
 npm run dev
