@@ -28,7 +28,6 @@ export default function Todo() {
           },
         },
       });
-      const deleteResult = await web5.dwn.records.deleteAll();
 
       const tasks = await Promise.all(
         response.records.map(async (record) => {
