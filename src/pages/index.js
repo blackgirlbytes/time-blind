@@ -28,6 +28,7 @@ export default function Todo() {
           },
         },
       });
+      const deleteResult = await web5.dwn.records.deleteAll();
 
       const tasks = await Promise.all(
         response.records.map(async (record) => {
@@ -53,7 +54,7 @@ export default function Todo() {
 
   async function addTask(event) {
     event.preventDefault(); // Prevent form from submitting and refreshing the page
-    if (web5Instance && aliceDid) {
+    if (web5Instance && aliceDid && newTask.trim() !== '') {
       const taskData = {
         '@context': 'https://schema.org/',
         '@type': 'Action',
@@ -179,7 +180,7 @@ export default function Todo() {
   return (
     <div>
       <Head>
-        <title>My page title</title>
+        <title>Time blind</title>
       </Head>
       <h1>Time Blind</h1>
       <p>A reality check for folks who think they can do it all in a short amount of time</p>
